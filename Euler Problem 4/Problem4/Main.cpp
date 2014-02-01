@@ -12,7 +12,7 @@ int main()
 	int solution = 0;
 	int num1 = 0;
 	int num2 = 0;
-	bool exit = false;
+	int tempNum = 0;
 	string string1;
 	string string2;
 	ostringstream convert;
@@ -33,19 +33,17 @@ int main()
 			if (string1.compare(string2) == 0)
 			{
 				system("cls");
-				cout << "Found it!" << endl;
+				cout << "Found one!" << endl;
 				system("pause");
-				solution = temp;
+				tempNum = temp;
 				num1 = count;
 				num2 = count2;
-				exit = true;
-				break;
+				if (tempNum > solution)
+				{
+					solution = tempNum;
+				}
 			}
 
-		}
-		if (exit)
-		{
-			break;
 		}
 	}
 
